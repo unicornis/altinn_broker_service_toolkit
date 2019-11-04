@@ -1,6 +1,15 @@
 # Altinn Broker Service Toolkit
 A Java-based microservice for communicating messages to Altinn's broker service.
 
+Requires Maven and Java JDK 1.8.0.
+
+# Setup
+The simplest way to set this up is by compiling an image for Docker.
+
+1. Create a new directory `conf` and add your P12 certificate to that directory as `certfile.p12`
+2. Copy `src/main/resources/config/application-sample.properties` to `conf/` and edit the file with your own credentials
+3. Run `docker build .`
+
 # About
 Developed by Unicornis AS for use in the membership management system HyperSys and for use as reference code by other integrators.
 

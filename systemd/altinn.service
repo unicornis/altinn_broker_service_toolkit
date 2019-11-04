@@ -1,0 +1,14 @@
+[Unit]
+Description=Altinn BST API
+After=network.target
+
+[Service]
+Type=simple
+User=altinn
+Environment=LOG_FOLDER=/var/log/altinn
+WorkingDirectory=/opt/altinn_broker_service_toolkit/bin
+ExecStart=/opt/altinn_broker_service_toolkit/bin/altinn-broker-service-toolkit-0.8.war
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
